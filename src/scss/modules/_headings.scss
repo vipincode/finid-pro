@@ -1,0 +1,81 @@
+// ================================================
+//           HEADINGS
+// ================================================
+.heading {
+    width: 60%;
+    margin: 0 auto;
+    p {
+        font-weight: $font-weight--sm;
+        color: $color--primary;
+        line-height: em(30px, 16px);
+    }
+}
+
+.lg-heading {
+    font-size: em(32px);
+    font-weight: $font-weight--xl;
+    line-height: em(36px, 32px);
+    margin-bottom: em(15px, 32px);
+    span {
+        font-weight: $font-weight--xs;
+    }
+    @include mq('md') {
+        font-size: em(48px);
+        margin-bottom: em(18px, 48px);
+    }
+    @include mq('lg') {
+        font-size: em(52px);
+        margin-bottom: em(18px, 42px);
+    }
+}
+
+.sm-heading {
+    font-size: em(14px);
+    font-weight: $font-weight--lg;
+    line-height: em(30px, 14px);
+    letter-spacing: $letter-space;
+    text-transform: uppercase;
+    color: $color--seconary;
+}
+
+.prim-heading {
+    font-size: em(32px);
+    font-weight: $font-weight--lg;
+    margin-bottom: em(15px, 32px);
+    span {
+        color: $color--seconary;
+    }
+    @include mq('md') {
+        font-size: em(36px);
+        margin-bottom: em(15px, 36px);
+    }
+}
+
+.sec-heading {
+    font-size: em(26px);
+    font-weight: $font-weight--xl;
+    margin-bottom: em(15px, 26px);
+    color: $color--primary;
+    span {
+        color: $color--seconary;
+    }
+    @include mq('md') {
+        font-size: em(28px);
+        margin-bottom: em(15px, 28px);
+    }
+}
+
+.ter-heading {
+    font-size: em(20px);
+    font-weight: $font-weight--md;
+    margin-bottom: em(15px, 20px);
+    color: $color--primary;
+}
+
+.text-accent {
+    font-size: em(17px);
+    @include mq('md') {
+        font-size: em(20px);
+    }
+}
+

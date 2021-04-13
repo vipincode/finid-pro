@@ -1,0 +1,25 @@
+// ==========================================================================
+//               HOME [SERVICE]
+// ==========================================================================
+
+#service {
+    @extend %top-110;
+    @extend %bottom-110;
+}
+
+.service {
+    @extend %center;
+    &-content {
+        @extend %top-80;
+    }
+    &-card {
+        background-color: $white;
+        padding: 25px;
+        border-radius: $br-radius;
+        border: 1px dashed color(green, x-light);
+        transition: box-shadow $transition ease;
+        &:hover {
+            box-shadow: 0 0 30px rgba(color(green, x-light), 0.47);
+        }
+    }
+}

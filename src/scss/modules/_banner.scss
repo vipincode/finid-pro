@@ -1,0 +1,45 @@
+// ============================================================================
+//                 NAVBAR [ALRGE]
+// ============================================================================
+
+#banner {
+    min-height: 100vh;
+    -webkit-clip-path: elipse(100% 55% at 48% 44%);
+    clip-path: ellipse(100% 55% at 48% 44%);
+    overflow: hidden;
+}
+
+.banner {
+    @include bg-image($bg-position: center, $bg-size: cover, $bg-repeat: no-repeat);
+    height: 100vh;
+    position: relative;
+    @include p-el($el: 'before', $el-width: 100%, $el-height: 100%) {
+        background-color: rgba($color--primary, 0.75);
+        top: 0;
+        left: 0;
+    }
+    @include p-el($el: 'after', $el-width: 100%, $el-height: 100%) {
+        @include bg-image($path: url('#{$img--path}/overlay-pattern.png'), $bg-repeat: repeat, $bg-position: center, $bg-size: 5px);
+        top: 0;
+        left: 0;
+    }
+
+    &-content {
+        @extend %top;
+        @extend %center;
+        padding-top: 50px;
+        color: $white;
+        article {
+            @include mq('lg') {
+                width: 65%;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+
+// ============================================================================
+//                 NAVBAR [SMALL]
+// ============================================================================

@@ -1,0 +1,32 @@
+// ============================================================================
+//                 NAVBAR 
+// ============================================================================
+
+.navbar {
+    @extend %top;
+    nav {
+        @include flexy($wrap: wrap, $just: space-between);
+    }
+
+    &--logo {
+        span {
+            display: inline-block;
+            background-color: $white;
+            padding: 20px 10px 10px;
+            height: 150px;
+            clip-path: polygon(100% 0, 100% 79%, 0 100%, 0 0);
+        }
+    }
+
+    &--links {
+        @include flexy($align: center);
+        height: 85px;
+        a {
+            padding: 15px 20px;
+            color: $white;
+            font-weight: $font-weight--sm;
+            font-size: em(14px);
+            text-transform: uppercase;
+        }
+    }
+}
