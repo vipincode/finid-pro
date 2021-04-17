@@ -14,12 +14,245 @@
     }
     &-card {
         background-color: $white;
-        padding: 25px;
+        padding: 20px;
         border-radius: $br-radius;
         border: 1px dashed color(green, x-light);
         transition: box-shadow $transition ease;
         &:hover {
-            box-shadow: 0 0 30px rgba(color(green, x-light), 0.47);
+            box-shadow: 0 0 30px rgba(color(green, x-light), 1);
         }
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: initial;
+        }
+    }
+}
+
+// ==========================================================================
+//               HOME [ABOUT]
+// ==========================================================================
+
+#about {
+    padding: 50px 0px;
+    @include bg-image($path: url('#{$img--path}/curv-grey.png'), $bg-position: center, $bg-size: cover, $bg-repeat: no-repeat);
+}
+
+.about {
+    .heading {
+        @extend %center;
+    }
+
+    &-content {
+        @extend %top-50;
+        article {
+            h2 {
+                font-size: em(24px);
+                font-weight: $font-weight--lg;
+                color: $color--primary;
+                margin-bottom: em(15px, 24px);
+            }
+
+            p {
+                margin-bottom: 15px;
+                line-height: em(30px, 16px);
+            }
+        }
+        .quotes {
+            margin-top: 30px;
+        }
+    }
+}
+
+// ==========================================================================
+//               HOME [BANKINGS]
+// ==========================================================================\
+
+#banking {
+    position: relative;
+    .plans {
+        background-color: $white;
+        padding: 5px;
+        box-shadow: 0 0 4px rgba($color--primary, 0.36);
+        border-radius: $br-radius;
+        margin-top: 24px;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        transition: box-shadow $transition ease-in-out;
+        &:hover {
+            box-shadow: 0 0 40px rgba($color--primary, 0.36);
+        }
+        @include mq('lg') {
+            position: absolute;
+            left: 50%;
+            bottom: -43px;
+            transform: translateX(-50%);
+            width: 60%;
+        }
+        
+        ul {
+            @include flexy($wrap: wrap);
+            
+            li {
+                flex: 0 1 per-line(2);
+                @include mq('md') {
+                    flex: 0 1 per-line(3);
+                }
+
+                @include mq('lg') {
+                    flex: 1 per-line(4);
+                }
+                text-align: center;
+                padding: 20px 10px;
+                a {
+                    color: color(black, x-light);
+                    display: block;
+                    font-size: em(10px);
+                    text-transform: uppercase;
+                    letter-spacing: $letter-space;
+                    font-weight: $font-weight--lg;
+                    transition: color $transition ease-in-out;
+                    &:hover {
+                        color: initial;
+                    }
+                }
+            }
+        }
+    }
+}
+.banking {
+    @include mq('lg') {
+        @include flexy($wrap: wrap);
+    }
+    &-content {
+        flex: 1 per-line(2);
+        padding: 50px;
+        @include mq('lg') {
+            height: 500px;
+        }
+        &__right {
+            background-color: color(green);
+            position: relative;
+            overflow: hidden;
+            .atm-cards {
+                position: absolute;
+                bottom: -20px;
+                right: 40px;
+            }
+        }
+        article {
+            h2 {
+                font-size: em(24px);
+                margin-bottom: em(15px, 24px);
+            }
+    
+            p {
+                line-height: em(30px, 16px);
+            }
+
+            .btn {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+// ==========================================================================
+//               HOME [TESTMONIALS]
+// ==========================================================================
+
+#testimonial {
+    @include bg-image($path: url('#{$img--path}/curv-grey.png'), $bg-position: 0 0, $bg-size: cover, $bg-repeat: no-repeat);
+    @extend %top-80;
+    padding: 100px 0px;
+    overflow: hidden;
+    position: relative;
+    @include p-el($el: "after", $el-width: 100%, $el-height: 155px) {
+        @include bg-image($path: url('#{$img--path}/curv-down.svg'), $bg-position: center, $bg-size: cover, $bg-repeat: no-repeat);
+        bottom: -8px; 
+    }
+}
+
+.testimonial {
+    position: relative;
+    height: 480px;
+    .swiper1 {
+        position: initial;
+        overflow: initial;
+        .swiper-pagination-bullet {
+            background-color: $color--seconary;
+        }
+    }
+    .heading {
+        text-align: center;
+        p {
+            margin-bottom: 30px;
+        }
+    }
+
+    &-card {
+        @extend %center;
+        width: 96%;
+        margin: 0 auto;
+        @include mq('lg') {
+            width: 50%;
+        }
+
+        img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: $br-roundy;
+            padding: 3px;
+            border: 2px solid color(green);
+        }
+
+        h4 {
+            font-size: em(17px);
+            font-weight: $font-weight--md;
+        }
+
+        small {
+            font-size: em(16px);
+        }
+
+        p {
+            margin-top: 30px;
+            position: relative;
+            @include p-el($el-width: 12px, $el-height: 12px, $el: 'after') {
+                content: '\f10e';
+                font-family: $font-icons;
+                bottom: 0;
+                right: 40px;
+                font-size: em(35px);
+                color: $color--primary;
+            }
+            @include p-el($el-width: 12px, $el-height: 12px, $el: 'before') {
+                content: '\f10d';
+                font-family: $font-icons;
+                top: -38px;
+                left: 0px;
+                font-size: em(35px);
+                color: $color--primary;
+            }
+        }
+    }
+}
+
+// ==========================================================================
+//               HOME [CONTACT US]
+// ==========================================================================
+
+#contact {
+    @extend %top-80;
+}
+
+.contact {
+    .heading {
+        @extend %center;
     }
 }

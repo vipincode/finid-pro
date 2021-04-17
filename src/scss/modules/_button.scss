@@ -1,0 +1,43 @@
+%btn {
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 4px 20px;
+    font-weight: $font-weight--md;
+    font-size: em(14px);
+    text-transform: uppercase;
+    line-height: em(30px, 14px);
+    border-bottom: 3px solid transparent;
+    border-radius: 30px;
+    color: $white;
+    transition: opacity $transition ease-out;
+    &:hover {
+        opacity: 0.85;
+    }
+}
+
+.btn {
+    &--primary {
+        @extend %btn;
+        background-color: $color--primary;
+        border-bottom: 3px solid rgba($black, 0.35);
+    }
+
+    &--secondary {
+        @extend %btn;
+        background-color: $color--seconary;
+        border-bottom: 3px solid darken($color--seconary, 20%);
+    }
+
+    &--white {
+        @extend %btn;
+        background-color: $white;
+        color: $black;
+        border-bottom: 3px solid rgba($black, 0.35);
+    }
+}
+
+.btn + .btn {
+    margin-left: 20px;
+}

@@ -7,15 +7,18 @@ body {
 	font-size: $base-font--size;
 	line-height: $base--line/$base-font--size;
 	font-weight: $font-weight--xs;
+	color: $black;
 }
 
 
-h1,h2,h3,h4,h5,h6, p {
+h1,h2,h3,h4,h5,h6 { 
 	margin: 0;
+	color: $color--primary;
 }
 
 p {
 	font-weight: $font-weight--xs;
+	margin: 0;
 }
 
 a {

@@ -5,6 +5,12 @@
 	@import url($font-google-Sans);
 }
 
+// Importing Font Awesome
+
+@if variable-exist(font-awesome ) {
+	@import url($font-awesome);
+}
+
 // px to em 
 
 @function em($target, $context: $base-font--size) {

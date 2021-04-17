@@ -34,7 +34,11 @@ module.exports = (env, argv) => ({
        {
          from: 'src/images/*',
          to: 'images/[name].[ext]',
-       }
+       },
+       {
+        from: 'node_modules/slick-carousel/slick/fonts/*',
+        to: 'assets/fonts/[name].[ext]',
+      }
      ],
      }),
    ],
