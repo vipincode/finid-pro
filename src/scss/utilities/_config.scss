@@ -15,12 +15,23 @@ $font-icons           : 'FontAwesome';
 // colors
 // $color--primary      : #1E552A;
 // $color--seconary     : #fb8133;
+
 $color--primary      : #fe6705;
 $color--seconary     : #f32853;
+$color--green        : #009432;
+$color--red          : #f32853;
+
 $white               : #ffffff;
 $grey                : #b2bec3;
 $black               : #0b0b0b;
 $light--black        : #1e272e;
+
+// Socils Icon Color
+$facebook            : #4267B2;   
+$twitter             : #1DA1F2;
+$in                  : #0077b5;
+$insta               : #8a3ab9;
+$telegram            : #0088cc;
 
 // Color Maps
 $ui-colors   : (
@@ -44,9 +55,9 @@ $colors     : (
 		base      : $black,
 		dark      : darken($black, 12%),
 	),
-	green: (
-		x-light   : lighten($color--primary, 68%),
-		light     : lighten($color--primary, 38%),
+	primary: (
+		x-light   : lighten($color--primary, 42%),
+		light     : lighten($color--primary, 25%),
 		base      : $color--primary,
 		dark      : darken($color--primary, 6%),
 	)

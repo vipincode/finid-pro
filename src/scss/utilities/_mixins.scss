@@ -42,6 +42,25 @@
     }
 }
 
+// ===============================================================
+//                FONT AWESOME
+// ===============================================================
+
+@mixin icons($el, $el-width, $el-height) {
+    @if $el=="before"or $el=="after" {
+        &:#{$el} {
+			font-family: 'FontAwesome';
+            width: $el-width;
+            height: $el-height;
+			position: absolute;
+            @content;
+        }
+    }
+    @else {
+        @warn "`#{$el}` is not a valid pseudo-element.";
+    }
+}
+
 // Flexy 
 
 @mixin flexy($disp: flex, $just: null, $wrap: null, $align: null) {

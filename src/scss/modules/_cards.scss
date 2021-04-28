@@ -1,0 +1,28 @@
+// =================================================================
+//  CARDS LAYOUT
+// =================================================================
+
+.card {
+    border: 1px dashed color(primary, x-light);
+    transition: box-shadow $transition ease-in;
+    &-picture {
+        overflow: hidden;
+        img {
+            transition: transform $transition ease-in;
+            transform-origin: 15% 18%;
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+    &-article {
+        padding: 15px;
+        .btn {
+            margin-top: 30px;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0 40px rgba($color--primary, 0.35);
+    }
+}

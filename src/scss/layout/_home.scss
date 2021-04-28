@@ -16,10 +16,10 @@
         background-color: $white;
         padding: 20px;
         border-radius: $br-radius;
-        border: 1px dashed color(green, x-light);
+        border: 1px dashed color(primary, x-light);
         transition: box-shadow $transition ease;
         &:hover {
-            box-shadow: 0 0 30px rgba(color(green, x-light), 1);
+            box-shadow: 0 0 30px rgba(color(primary, x-light), 1);
         }
 
         img {
@@ -38,7 +38,7 @@
 
 #about {
     padding: 50px 0px;
-    @include bg-image($path: url('#{$img--path}/curv-grey.png'), $bg-position: center, $bg-size: cover, $bg-repeat: no-repeat);
+    background-color: color(grey, x-light);
 }
 
 .about {
@@ -51,8 +51,7 @@
         article {
             h2 {
                 font-size: em(24px);
-                font-weight: $font-weight--lg;
-                color: $color--primary;
+                font-weight: $font-weight--md;
                 margin-bottom: em(15px, 24px);
             }
 
@@ -130,18 +129,29 @@
     }
     &-content {
         flex: 1 per-line(2);
-        padding: 50px;
+        padding: 12px;
         @include mq('lg') {
             height: 500px;
+            padding: 50px;
         }
         &__right {
-            background-color: color(green);
+            background: linear-gradient(-135deg, $color--primary, $color--seconary);
             position: relative;
             overflow: hidden;
+            height: 400px;
+            @include mq('md') {
+                height: 460px;
+            }
+            @include mq('lg') {
+                height: auto;
+            }
             .atm-cards {
                 position: absolute;
-                bottom: -20px;
-                right: 40px;
+                bottom: -10px;
+                @include mq('lg') {
+                    bottom: -20px;
+                    right: 40px;
+                }
             }
         }
         article {
@@ -166,7 +176,7 @@
 // ==========================================================================
 
 #testimonial {
-    @include bg-image($path: url('#{$img--path}/curv-grey.png'), $bg-position: 0 0, $bg-size: cover, $bg-repeat: no-repeat);
+    background-color: color(grey, x-light);
     @extend %top-80;
     padding: 100px 0px;
     overflow: hidden;
@@ -179,7 +189,7 @@
         position: initial;
         overflow: initial;
         .swiper-pagination-bullet {
-            background-color: $color--seconary;
+            background-color: $color--primary;
         }
     }
     .heading {
@@ -203,7 +213,7 @@
             object-fit: cover;
             border-radius: $br-roundy;
             padding: 3px;
-            border: 2px solid color(green);
+            border: 2px solid color(primary);
         }
 
         h4 {
@@ -238,24 +248,3 @@
     }
 }
 
-// ==========================================================================
-//               HOME [CONTACT US]
-// ==========================================================================
-
-#contact {
-    @extend %top-80;
-    .heading {
-        @extend %center;
-    }
-}
-
-.contact {
-    background-color: color(grey, x-light);
-    @extend %top-50;
-    &-form {
-        background-color: $white;
-    }
-    &-address {
-        padding: 20px;
-    }
-}

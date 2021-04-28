@@ -1,0 +1,58 @@
+// =============================================================
+//  ABOUT US
+// =============================================================
+
+#abutus {
+   padding: 80px 0px 0;
+   background-color: color(grey, x-light);
+}
+
+.abutus {
+    &-content {
+        span {
+            display: block;
+        }
+        ul {
+            @extend %top-30;
+            li {
+                display: block;
+                padding: 7px 25px;
+                position: relative;
+                @include icons($el: 'before', $el-width: 12px, $el-height: 12px) {
+                    content: '\f00c';
+                    top: 5px;
+                    left: 0;
+                    color: $color--primary;
+                }
+            }
+        }
+    }
+}
+
+#counter {
+    background: linear-gradient(90deg, $color--primary, $color--seconary);
+    padding: 100px 0px;
+}
+
+.counter {
+    text-align: center;
+    color: $white;
+
+    h1 {
+        font-size: em(28px);
+        font-weight: $font-weight--xs;
+    }
+
+    span {
+        font-size: em(24px);
+        font-weight: $font-weight--md;
+    }
+}
+
+.about {
+    &-img {
+        img {
+            margin-bottom: -6px;
+        }
+    }
+}

@@ -1,32 +1,128 @@
 // ============================================================================
-//                 NAVBAR 
+//                 NAVBAR [SMALL]
+// ============================================================================
+
+.smnav {
+    background: linear-gradient(90deg, $color--seconary, $color--primary, $color--seconary);
+    &-main {
+        @include flexy($wrap: wrap, $just: space-between);
+        ul {
+            color: $white;
+            .nv-contacts {
+                padding-left: 0;
+                span {
+                    margin-right: 10px;
+                }
+            }
+            li {
+                display: inline-block;
+                padding: 5px 15px;
+                font-size: em(14px);
+                a {
+                    color: $white;
+                }
+                [title~="telegram"] {
+                    font-size: em(13px);
+                }
+            }
+        }
+    }
+}
+
+// ============================================================================
+//                 NAVBAR [MAIN]
 // ============================================================================
 
 .navbar {
-    @extend %top;
-    nav {
-        @include flexy($wrap: wrap, $just: space-between);
+    background-color: $white;
+    border-bottom: 1px solid color(primary, x-light);
+    &-logo {
+       img  {
+        width: 160px;
+        @include mq('lg') {
+            width: 200px;
+        }
+       }
     }
 
-    &--logo {
-        span {
-            display: inline-block;
-            background-color: $white;
-            padding: 20px 10px 10px;
-            height: 150px;
-            clip-path: polygon(100% 0, 100% 79%, 0 100%, 0 0);
+    &-main {
+        @include mq('lg') {
+            @include flexy($wrap: wrap, $just: space-between, $align: center);
+        }
+
+        ul {
+            display: none;
+            @include mq('lg') {
+                display: block;
+            }
+            li {
+                display: inline-block;
+            }
+            a {
+                display: inline-block;
+                padding: 13px 15px;
+                font-size: em(17px);
+                line-height: em(45px, 17px);
+                font-weight: $font-weight--sm;
+                color: $black;
+                transition: color 0.3s ease;
+            }
         }
     }
 
-    &--links {
-        @include flexy($align: center);
-        height: 85px;
-        a {
-            padding: 15px 20px;
-            color: $white;
-            font-weight: $font-weight--sm;
-            font-size: em(14px);
-            text-transform: uppercase;
+    &-sub {
+        position: relative;
+        @include p-el($el: 'before', $el-width: auto, $el-height: auto) {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-top: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-left: 12px solid transparent;
+            border-bottom: 12px solid $color--primary;
+            display: none;
+        }
+        &:hover::before {
+            display: block;
+        }
+        @include icons($el: 'after', $el-width: 10px, $el-height: 10px) {
+            content: '\f107';
+            top: 23px;
+            right: 0px;
+            font-size: em(19px);
+            color: $color--primary;
+        }
+        &:hover::after {
+            content: '\f106';
+        }
+        &__items {
+            width: 340px;
+            padding: 15px;
+            background: linear-gradient(-90deg, $color--primary, $color--seconary );
+            position: absolute;
+            left: 50%;
+            top: 71px;
+            transform: translateX(-50%);
+            z-index: 9;
+            display: none;
+            ul {
+                li {
+                    display: block;
+                    border-bottom: 1px dotted color(primary, light);
+                    &:last-child {
+                        border: none;
+                    }
+                    a {
+                        display: block;
+                        font-size: em(15px);
+                        line-height: em(19px, 15px);
+                        color: $white;
+                    }
+                }
+            }
+        }
+        &:hover .navbar-sub__items {
+            display: block;
         }
     }
 }

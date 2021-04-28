@@ -2,11 +2,14 @@
 //           HEADINGS
 // ================================================
 .heading {
-    width: 60%;
+    width: 95%;
     margin: 0 auto;
+    @include mq('lg') {
+        width: 60%;
+    }
     p {
         font-weight: $font-weight--sm;
-        color: $color--primary;
+        color: $black;
         line-height: em(30px, 16px);
     }
 }
@@ -18,6 +21,7 @@
     margin-bottom: em(15px, 32px);
     span {
         font-weight: $font-weight--xs;
+        color: $color--primary;
     }
     @include mq('md') {
         font-size: em(48px);
@@ -35,7 +39,7 @@
     line-height: em(30px, 13px);
     letter-spacing: $letter-space;
     text-transform: uppercase;
-    color: $color--seconary;
+    color: $color--primary;
 }
 
 .prim-heading {
@@ -55,9 +59,9 @@
     font-size: em(26px);
     font-weight: $font-weight--xl;
     margin-bottom: em(15px, 26px);
-    color: $color--primary;
+    color: $black;
     span {
-        color: $color--seconary;
+        color: $color--primary;
     }
     @include mq('md') {
         font-size: em(28px);
@@ -69,7 +73,7 @@
     font-size: em(17px);
     font-weight: $font-weight--md;
     margin-bottom: em(15px, 17px);
-    color: $color--primary;
+    color: $black;
 }
 
 .text-accent {

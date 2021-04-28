@@ -3,48 +3,42 @@
 // ============================================================================
 
 #banner {
-    min-height: 100vh;
-    -webkit-clip-path: elipse(100% 55% at 48% 44%);
-    clip-path: ellipse(100% 55% at 48% 44%);
-    overflow: hidden;
+    background: linear-gradient(90deg, $color--primary, $color--seconary);
 }
 
 .banner {
-    @include bg-image($bg-position: center, $bg-size: cover, $bg-repeat: no-repeat);
-    height: 100vh;
-    position: relative;
-    @include p-el($el: 'before', $el-width: 100%, $el-height: 100%) {
-        // background-color: rgba($color--primary, 0.75);
-        background: linear-gradient(rgba($color--primary, 0.6), rgba($color--seconary, 0.6));
-        top: 0;
-        left: 0;
-    }
-    @include p-el($el: 'after', $el-width: 100%, $el-height: 100%) {
-        @include bg-image($path: url('#{$img--path}/overlay-pattern.png'), $bg-repeat: repeat, $bg-position: center, $bg-size: 5px);
-        top: 0;
-        left: 0;
-    }
+    width: 100%;
+    height: calc(100vh - 103.33px);
+    @extend %top;
 
     &-content {
-        @extend %top;
-        @extend %center;
-        padding-top: 50px;
-        color: $white;
-        article {
-            @include mq('lg') {
-                width: 65%;
-                max-width: 800px;
-                margin: 0 auto;
+        height: 100%;
+        background: linear-gradient(-90deg, rgba($black , 0.665), rgba($black, 0.665));
+        @include flexy($just: center, $align: center);
+        text-align: center;
+        color: color(primary, x-light);
+        &__items {
+            padding: 15px;
+            @include mq('md') {
+                width: 93%;
             }
-
-            h1 {
-                color: $white;
+            @include mq('lg') {
+                width: 85%;
+            }
+            @include mq('xl') {
+                width: 70%;
+            }
+            @include mq('xxl') {
+                width: 60%;
+            }
+            .lg-heading {
+                span {
+                    color: color(primary, x-light);
+                }
+            }
+            .btn {
+                margin-top: 50px;
             }
         }
     }
 }
-
-
-// ============================================================================
-//                 NAVBAR [SMALL]
-// ============================================================================

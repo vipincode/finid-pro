@@ -20,21 +20,21 @@
 .btn {
     &--primary {
         @extend %btn;
-        background-color: $color--primary;
-        border-bottom: 3px solid rgba($black, 0.35);
+        background: linear-gradient(90deg, $color--primary, $color--seconary);
+        border-bottom: 3px solid darken($color--seconary, 20%);
     }
 
     &--secondary {
         @extend %btn;
-        background-color: $color--seconary;
-        border-bottom: 3px solid darken($color--seconary, 20%);
+        background: $light--black;
+        border-bottom: 3px solid darken($light--black, 20%);
     }
 
     &--white {
         @extend %btn;
-        background-color: $white;
-        color: $black;
-        border-bottom: 3px solid rgba($black, 0.35);
+        background-color: color(primary, x-light);
+        color: $color--primary;
+        border-bottom: 3px solid color(primary, light);
     }
 }
 
