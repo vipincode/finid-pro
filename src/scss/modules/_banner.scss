@@ -2,43 +2,52 @@
 //                 NAVBAR [ALRGE]
 // ============================================================================
 
-#banner {
-    background: linear-gradient(90deg, $color--primary, $color--seconary);
-}
-
 .banner {
-    width: 100%;
-    height: calc(100vh - 103.33px);
     @extend %top;
-
-    &-content {
-        height: 100%;
-        background: linear-gradient(-90deg, rgba($black , 0.665), rgba($black, 0.665));
-        @include flexy($just: center, $align: center);
-        text-align: center;
-        color: color(primary, x-light);
-        &__items {
-            padding: 15px;
-            @include mq('md') {
-                width: 93%;
-            }
-            @include mq('lg') {
-                width: 85%;
-            }
-            @include mq('xl') {
-                width: 70%;
-            }
-            @include mq('xxl') {
-                width: 60%;
-            }
-            .lg-heading {
-                span {
-                    color: color(primary, x-light);
-                }
-            }
+    .swiper2 {
+        height: calc(100vh - 103.33px);
+        background-color: color(primary, x-light);
+        .swiper-pagination-bullet {
+            background: $white;
+        }
+        .swiper-button-prev:after, 
+        .swiper-button-next:after {
+            color: $white;
+            font-size: 20px;
+        }
+        .swiper-slide {
+            position: relative;
+            @include bg-image($bg-position: center, $bg-repeat: no-repeat, $bg-size: cover);
+        }
+        .s-arrow {
+            opacity: 0;
+            background-color: $color--primary;
+            padding: 10px;
+            width: 42px;
+            height: 42px;
+            border-radius: $br-roundy;
+            text-align: center;
+            line-height: em(50px, 16px);
+            transition: opacity $transition ease-out;
+        }
+        &:hover .s-arrow {
+            opacity: 1;
+        }
+        article {
+            color: $white;
             .btn {
                 margin-top: 50px;
             }
-        }
+            @extend %position-center;
+            width: 100%;
+            text-align: center;
+            @include mq('lg') {
+                width: 70%;
+            }
+        } 
+    }
+
+    .swiper-slide {
+        height: 100%;
     }
 }

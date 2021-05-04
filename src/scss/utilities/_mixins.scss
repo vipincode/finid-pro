@@ -63,8 +63,9 @@
 
 // Flexy 
 
-@mixin flexy($disp: flex, $just: null, $wrap: null, $align: null) {
+@mixin flexy($disp: flex, $just: null, $wrap: null, $align: null, $dir: null) {
 	display: $disp;
+	flex-direction: $dir;
 	flex-wrap: $wrap;
 	justify-content: $just;
 	align-items: $align;

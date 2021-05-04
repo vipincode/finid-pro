@@ -13,16 +13,18 @@ $font-awesome         : 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7
 $font-icons           : 'FontAwesome';
 
 // colors
-// $color--primary      : #1E552A;
-// $color--seconary     : #fb8133;
 
-$color--primary      : #fe6705;
-$color--seconary     : #f32853;
-$color--green        : #009432;
-$color--red          : #f32853;
+// $color--primary      : #11A44C;
+$color--primary      : #8ac926ff;
+$color--seconary     : #ff595eff;
+
+// MAKING COLOR
+$sunglow             : #ffca3aff;
+$green-blue          : #1982c4ff;
+$royal-purple        : #6a4c93ff;
 
 $white               : #ffffff;
-$grey                : #b2bec3;
+$grey                : #767575;
 $black               : #0b0b0b;
 $light--black        : #1e272e;
 
@@ -36,16 +38,17 @@ $telegram            : #0088cc;
 // Color Maps
 $ui-colors   : (
 	default          : #1e272e,
-	info             : #74b9ff,
-	warning          : #fd9644,
-	success          : #00b894,
-	error            : #fc5c65
+	basic            : #0077b5,
+	info             : #8a3ab9,
+	warning          : #4267B2,
+	success          : #009432,
+	error            : #f32853
 );
 
 $colors     : (
 	grey: (
-		x-light   : lighten($grey, 25%),
-		light     : lighten($grey, 12%),
+		x-light   : lighten($grey, 49%),
+		light     : lighten($grey, 25%),
 		base      : $grey,
 		dark      : darken($grey, 12%),
 	),
@@ -56,7 +59,7 @@ $colors     : (
 		dark      : darken($black, 12%),
 	),
 	primary: (
-		x-light   : lighten($color--primary, 42%),
+		x-light   : lighten($color--primary, 45%),
 		light     : lighten($color--primary, 25%),
 		base      : $color--primary,
 		dark      : darken($color--primary, 6%),

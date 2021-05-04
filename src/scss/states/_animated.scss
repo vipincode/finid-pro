@@ -1,0 +1,19 @@
+// ====================================================================
+// ANIMATED CSS RULE ON LOADED
+// ====================================================================
+
+.atm-cards {
+    opacity: 0;
+}
+
+.atm-cards.animate__animated {
+    opacity: 1;
+}
+
+.abt--image {
+    opacity: 0.65;
+}
+
+.abt--image.animate__animated  {
+    opacity: 1;
+}

@@ -3,26 +3,39 @@
 // ============================================================================
 
 .smnav {
-    background: linear-gradient(90deg, $color--seconary, $color--primary, $color--seconary);
+    background-color: color(grey, x-light);
     &-main {
-        @include flexy($wrap: wrap, $just: space-between);
+        @include flexy($wrap: wrap, $just: space-between, $align: center);
         ul {
-            color: $white;
             .nv-contacts {
                 padding-left: 0;
                 span {
+                    cursor: pointer;
+                    display: inline-block;
+                    padding: 5px 15px;
+                    background-color: $color--seconary;
+                    color: $white;
                     margin-right: 10px;
+                    font-size: em(15px);
+                    line-height: em(28px, 15px);
+                    border-radius: 30px;
+                    font-weight: $font-weight--sm;
+                    letter-spacing: $letter-space;
                 }
             }
             li {
                 display: inline-block;
-                padding: 5px 15px;
+                padding: 5px 10px;
                 font-size: em(14px);
                 a {
-                    color: $white;
-                }
-                [title~="telegram"] {
-                    font-size: em(13px);
+                    color: color(primary);
+                    display: inline-block;
+                    border-radius: $br-roundy;
+                    text-align: center;
+                    line-height: em(29px, 14px);
+                    &:hover {
+                        color: $color--seconary;
+                    }
                 }
             }
         }
@@ -34,8 +47,22 @@
 // ============================================================================
 
 .navbar {
-    background-color: $white;
-    border-bottom: 1px solid color(primary, x-light);
+    background-color: color(grey, x-light);
+    z-index: 99;
+    color: $white;
+    position: relative;
+    @include p-el($el: 'after', $el-width: 50%, $el-height: 100%) {
+        top: 0px;
+        right: 0;
+        background-color: color(primary);
+        clip-path: polygon(100% 0, 100% 100%, 0% 100%, 8% 0);
+        z-index: -1;
+    }
+    &:after {
+       @include mq('lg') {
+        width: 80%;
+       }
+    }
     &-logo {
        img  {
         width: 160px;
@@ -64,13 +91,14 @@
                 font-size: em(17px);
                 line-height: em(45px, 17px);
                 font-weight: $font-weight--sm;
-                color: $black;
+                color: $white;
                 transition: color 0.3s ease;
             }
         }
     }
 
     &-sub {
+       
         position: relative;
         @include p-el($el: 'before', $el-width: auto, $el-height: auto) {
             bottom: 0;
@@ -79,8 +107,9 @@
             border-top: 12px solid transparent;
             border-right: 12px solid transparent;
             border-left: 12px solid transparent;
-            border-bottom: 12px solid $color--primary;
+            border-bottom: 12px solid color(grey, x-light);
             display: none;
+            z-index: 3;
         }
         &:hover::before {
             display: block;
@@ -90,25 +119,24 @@
             top: 23px;
             right: 0px;
             font-size: em(19px);
-            color: $color--primary;
         }
         &:hover::after {
             content: '\f106';
         }
         &__items {
+            background-color:  color(grey, x-light);
             width: 340px;
             padding: 15px;
-            background: linear-gradient(-90deg, $color--primary, $color--seconary );
             position: absolute;
             left: 50%;
             top: 71px;
             transform: translateX(-50%);
-            z-index: 9;
+            z-index: 99;
             display: none;
             ul {
                 li {
                     display: block;
-                    border-bottom: 1px dotted color(primary, light);
+                    border-bottom: 1px dotted $color--primary;
                     &:last-child {
                         border: none;
                     }
@@ -116,7 +144,7 @@
                         display: block;
                         font-size: em(15px);
                         line-height: em(19px, 15px);
-                        color: $white;
+                        color: $color--primary;
                     }
                 }
             }

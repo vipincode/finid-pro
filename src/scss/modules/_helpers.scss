@@ -13,6 +13,15 @@
     transform: translate(-50%, -50%);
 }
 
+%bar-center {
+    .sec-heading {
+        &::after {
+            left: 50%;
+            transform: translateX(-50%)
+        }
+    }
+}
+
 %small-text__14 {
     font-size: em(14px);
 }

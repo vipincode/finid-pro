@@ -17,13 +17,13 @@
         <div class="site-container">
           <div class="smnav-main">
             <ul>
-              <li class="nv-contacts"><span><i class="fa fa-phone" aria-hidden="true"></i></span>+91-8888000022</li>
-            </ul>
-            <ul>
               <li><a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
               <li><a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
               <li><a href="#" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
               <li><a href="#" title="telegram"><i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
+            </ul>
+            <ul>
+              <li class="nv-contacts"><span><i class="fa fa-phone" aria-hidden="true"></i> +91-8888000022</span></li>
             </ul>
           </div>
         </div>
@@ -33,7 +33,7 @@
         <div class="site-container">
           <nav class="navbar-main">
             <a href="./" class="navbar-logo">
-              <img src="images/fn-logo.svg" alt="">
+              <img src="images/logo.png" alt="">
             </a>
             <ul>
               <li class="navbar-sub"><a href="#">Company</a>
@@ -95,20 +95,65 @@
     <!-- /NAVBAR -->
 
     <section id="banner">
-      <div class="banner" data-vide-bg="mp4: images/banner.mp4, poster: images/banner.jpg"
-          data-vide-options="posterType: jpg, loop: true, resizing: true, muted: false, position: 50% 50%">
-        <div class="banner-content">
-          <div class="banner-content__items">
-            <h1 class="lg-heading">
-              <span>Everything you need to</span> <br>
-              increase your Business
-             </h1>
-            <p class="text-accent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi inventore est quas 
-              corrupti? Expedita reprehenderit dolores nihil porro, omnis fuga, sapiente et, 
-              mollitia maiores magnam deleniti tenetur nostrum dolorum. Repellat!
-            </p>
-            <a href="#" class="btn btn--primary">Contact Us</a>
+      <div class="banner">
+        <div class="swiper-container swiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url('images/banner1.jpg');">
+              <div class="site-container">
+                <div class="banner-content">
+                  <article>
+                      <h1 id="bn-heading1" class="lg-heading">Section Headings</h1>       
+                      <p class="text-accent sy-title1">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum saepe et natus dolores exercitationem minus illum pariatur! Impedit vero autem doloremque id expedita, deserunt ad ab iure pariatur, numquam unde.
+                      </p>
+                      <a href="#" class="btn btn--secondary">Contact us</a>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('images/banner2.jpg');">
+              <div class="site-container">
+                <div class="banner-content">
+                  <article>
+                    <h1 id="bn-heading2" class="lg-heading">Section Headings</h1>
+                    <p class="text-accent sy-title2">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum saepe et natus dolores exercitationem minus illum pariatur! Impedit vero autem doloremque id expedita, deserunt ad ab iure pariatur, numquam unde.
+                    </p>
+                    <a href="#" class="btn btn--secondary">Contact us</a>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('images/banner4.jpg');">
+              <div class="site-container">
+                <div class="banner-content">
+                  <article>
+                    <h1 id="bn-heading3" class="lg-heading">Section Headings</h1>
+                      <p class="text-accent sy-title3">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum saepe et natus dolores exercitationem minus illum pariatur! Impedit vero autem doloremque id expedita, deserunt ad ab iure pariatur, numquam unde.
+                      </p>
+                      <a href="#" class="btn btn--secondary">Contact us</a>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('images/banner5.jpg');">
+              <div class="site-container">
+                <div class="banner-content">
+                  <article>
+                    <h1 id="bn-heading4" class="lg-heading">Section Headings</h1>
+                      <p class="text-accent sy-title4">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum saepe et natus dolores exercitationem minus illum pariatur! Impedit vero autem doloremque id expedita, deserunt ad ab iure pariatur, numquam unde.
+                      </p>
+                      <a href="#" class="btn btn--secondary">Contact us</a>
+                  </article>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="swiper-pagination swiper-pagination2"></div>
+          <div class="swiper-button-next swiper-button-next2 s-arrow"></div>
+          <div class="swiper-button-prev swiper-button-prev2 s-arrow"></div>
         </div>
       </div>
     </section>
@@ -118,7 +163,7 @@
       <div class="site-container">
         <div class="service">
           <div class="heading">
-            <h1 class="sm-heading">OUR SERVICES</h1>
+            <h1 class="sm-heading">Our Services</h1>
             <h2 class="sec-heading">Start Growing With Us.</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempore
@@ -128,7 +173,7 @@
           <div class="service-content">
             <div class="row gy-3">
               <div class="col-md-6 col-lg-3">  
-                <div class="service-card">
+                <div id="anime1" class="service-card">
                   <a href="#">
                     <div>
                       <img src="images/saving-account.png" alt="saving accounts">
@@ -144,7 +189,7 @@
                 </div>
               </div>
               <div class="col-md-6 col-lg-3">
-                <div class="service-card">
+                <div id="anime2" class="service-card">
                   <a href="#">
                     <div>
                       <img src="images/fixed-deposite.png" alt="Fixed Deposite">
@@ -160,7 +205,7 @@
                 </div>
               </div>
               <div class="col-md-6 col-lg-3">
-                <div class="service-card">
+                <div id="anime3" class="service-card">
                   <a href="#">
                     <div>
                       <img src="images/loan.png" alt="loan">
@@ -176,7 +221,7 @@
                 </div>
               </div>
               <div class="col-md-6 col-lg-3">
-                <div class="service-card">
+                <div id="anime4" class="service-card">
                   <a href="#">
                     <div>
                       <img src="images/recusing-deposite.png" alt="Recurring Deposite">
@@ -191,7 +236,6 @@
                   </a>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-7"></div>
             </div>
           </div>
         </div>
@@ -213,8 +257,8 @@
           <div class="about-content">
             <div class="row">
               <div class="col-md-6">
-                <div>
-                  <img src="images/about.png" alt="About image">
+                <div class="abt--image">
+                  <img src="images/about1.jpg" alt="About image">
                 </div>
               </div>
               <div class="col-md-6">
@@ -222,12 +266,15 @@
                   <article>
                     <h2>Our Story</h2>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea fugit quod magnam a aperiam labore dolor alias id dignissimos autem, possimus iste quasi quae, distinctio vel, voluptates dolores illum!
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea fugit quod magnam a aperiam labore dolor alias id dignissimos autem, possimus iste quasi quae, distinctio vel, voluptates dolores illum!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea 
+                      fugit quod magnam a aperiam labore dolor alias id dignissimos autem, 
+                      possimus iste quasi quae, distinctio vel, voluptates dolores illum!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea fugit quod magnam a aperiam labore dolor alias id dignissimos autem, possimus iste quasi quae, distinctio vel, voluptates dolores illum!
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea fugit quod magnam a aperiam labore dolor alias.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea 
+                      fugit quod magnam a aperiam labore dolor alias id dignissimos autem, 
+                      possimus iste quasi quae, distinctio vel, voluptates dolores illum.
                     </p>
                     <div class="quotes">
                       <span>
@@ -250,14 +297,11 @@
         <div class="banking-content">
           <h1 class="sm-heading">Easy Banking</h1>
           <article>
-            <h2>Must Simplified Banking</h2>
+            <h2 class="sec-heading">Must Simplified Banking</h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos quia doloribus 
               minus quisquam nihil vitae laboriosam maxime necessitatibus delectus omnis iste nostrum 
-              culpa quaerat dolores illum alias, animi deleniti! Molestias.
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos quia doloribus 
-              minus quisquam nihil vitae laboriosam maxime necessitatibus delectus omnis iste nostrum 
-              culpa quaerat dolores illum alias, animi deleniti! Molestias.
+              culpa quaerat dolores illum alias.
             </p>
             <a href="#" class="btn btn--secondary">See Our Plans</a>
           </article>
@@ -294,6 +338,92 @@
       </div>
     </section>
     <!-- /BANKING -->
+
+    <section id="loan">
+      <div class="site-container">
+        <div class="loan">
+          <div class="loan-heading">
+            <h2 class="prim-heading">Getting a Loan</h2>
+            <h2 class="sec-heading">Looking for More?</h2>
+          </div>
+          <div class="loan-content">
+            <div class="row">
+              <div class="col-md-6">
+                <article>
+                  <h3>Check Your Rate</h3>
+                  <p>
+                    Select your loan amount, answer a few questions and get your lowest 
+                    eligible rates instantly.
+                  </p>
+                </article>
+                <article>
+                  <h3>Choose Your Loan</h3>
+                  <p>
+                    Choose the offer with the terms that work best
+                    for you.
+                  </p>
+                </article>
+                <article>
+                  <h3>Get Your Funds</h3>
+                  <p>
+                    Your money goes straight to your bank account via direct deposit.
+                  </p>
+                </article>
+              </div>
+              <div class="col-md-6">
+                <div class="loan-images">
+                  <img src="images/loan-card.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Loans -->
+
+    <section id="apply" style="background-image: url('images/banner5.jpg');">
+      <div class="site-container">
+        <div class="apply">
+          <div class="apply-heading">
+            <h2 class="prim-heading">Apply in three easy steps</h2>
+            <h2 class="sec-heading">Fast & Easy Application Process.</h2>
+          </div>
+          <div class="apply-content">
+            <div class="row gy-4">
+              <div class="col-md-4">
+                <div class="step-card">
+                  <h3>Step 1</h3>
+                  <p>
+                    Apply online in minutes, or visit one of our 200+ locations2.
+                  </p>
+                  <a href="#" class="btn btn--secondary">Apply Now</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="step-card">
+                  <h3>Step 2</h3>
+                  <p>
+                    Submit your documents.
+                  </p>
+                  <a href="#" class="btn btn--secondary">Apply Now</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="step-card">
+                  <h3>Step 3</h3>
+                  <p>
+                    Get approved. Get your money as soon as today2.
+                  </p>
+                  <a href="#" class="btn btn--secondary">Apply Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /APPLY -->
 
     <section id="testimonial">
       <div class="site-container">
@@ -348,52 +478,75 @@
     </section>
     <!-- /TESTIMONIALS -->
 
-    <section id="contacts">
+    <section id="news">
       <div class="site-container">
-        <div class="heading">
-          <h2 class="sec-heading"><span>Get in</span> Touch</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit!
-          </p>
-        </div>
-        <div class="contact">
-          <div class="row gy-3">
-            <div class="col-md-6 col-lg-5">
-              <div class="contact-form">
-                <form>
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" placeholder="Name">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" placeholder="Email">
-                  <label for="cont">Contact:</label>
-                  <input type="text" id="cont" placeholder="Contact number">
-                  <label for="msg">Message:</label>
-                  <textarea name="" id="msg" cols="3" rows="5"></textarea>
-                  <button class="btn btn--primary">Send Message</button>
-                </form>
+        <div class="news">
+          <div class="news-heading">
+            <h2 class="prim-heading">Banking News</h2>
+            <h2 class="sec-heading">Get more Latest News here ...</h2>
+          </div>
+          <div class="row gy-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="bcard">
+                <div class="bcard-picture">
+                  <a href="#"><img src="images/finnid1.jpg" alt=""></a>
+                </div>
+                <div class="bcard-contnet">
+                  <a href="#" class="bcard-heading">How to build a better business credit score</a>
+                  <span>20 February 2018</span>
+                  <article>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit, Soluta
+                      placeat.
+                    </p>
+                    <a href="#" class="btn--blogs">Read more</a>
+                  </article>
+                </div>
+              </div>
+            </div> 
+            <div class="col-md-6 col-lg-4">
+              <div class="bcard">
+                <div class="bcard-picture">
+                  <a href="#"><img src="images/finnid7.jpg" alt=""></a>
+                </div>
+                <div class="bcard-contnet">
+                  <a href="#" class="bcard-heading">How to build a better business credit score</a>
+                  <span>20 February 2018</span>
+                  <article>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit, Soluta
+                      placeat.
+                    </p>
+                    <a href="#" class="btn--blogs">Read more</a>
+                  </article>
+                </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-7">
-              <div class="contact-address">
-                <h3 class="ter-heading">Address</h3>
-                <p>C-1/65, Vineet Khand, Gomti Nagar, Lucknow, <br> Uttar Pradesh 226010</p>
-                <h3 class="ter-heading hd-addr">Contact</h3>
-                <p>+91-9999888222</p>
-                <h3 class="ter-heading hd-addr">Website</h3>
-                <a class="weblinks" href="http://diptimate.com">www.diptimate.com</a>
-                <a class="weblinks" href="http://qpickservices.com">www.qpickservices.com</a>
-                <h3 class="ter-heading hd-addr">Email</h3>
-                <ul>
-                  <li><a href="#">hr@finnidpro.com</a></li>
-                  <li><a href="#">info@finnidpro.com</a></li>
-                </ul>
+            <div class="col-md-6 col-lg-4">
+              <div class="bcard">
+                <div class="bcard-picture">
+                  <a href="#"><img src="images/innid2.jpg" alt=""></a>
+                </div>
+                <div class="bcard-contnet">
+                  <a href="#" class="bcard-heading">How to build a better business credit score</a>
+                  <span>20 February 2018</span>
+                  <article>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit, Soluta
+                      placeat.
+                    </p>
+                    <a href="#" class="btn--blogs">Read more</a>
+                  </article>
+                </div>
               </div>
             </div>
+          </div>
+          <div class="news-list">
+            <a href="#" class="btn btn--primary">See all news list</a>
           </div>
         </div>
       </div>
     </section>
-    <!-- /CONTACT US -->
    
     <section id="footer">
       <div class="site-container">
@@ -445,10 +598,10 @@
             <form action="">
               <p>Subscribe our news letter</p>
               <div class="row g-0">
-                <div class="col-8">
+                <div class="col-lg-8 col-xl-7">
                   <input type="email" placeholder="Enter your email id">
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-xl-5">
                   <button class="btn--newsletter">Subscribe</button>
                 </div>
               </div>
@@ -463,10 +616,10 @@
 
            </div>
          </div>
-         <div class="copyrights">
-           <p>Copyright &copy; 2021 finnidpro Private Limited All rights reserved.</p>
-         </div>
        </div>
+      </div>
+      <div class="copyrights">
+        <p>Copyright &copy; 2021 finnidpro Private Limited All rights reserved.</p>
       </div>
     </section>
     <!-- /FOOTER -->

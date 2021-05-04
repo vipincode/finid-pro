@@ -28,6 +28,23 @@ if(testimonials) {
   });
 }
 
+var swiper2 = new Swiper('.swiper2', {
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination2',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next2',
+      prevEl: '.swiper-button-prev2',
+    },
+});
 
 // ============================================================
 // BACK TO TOP CODE & STICKY NAV
@@ -61,7 +78,7 @@ $backToTop.on('click', function() {
 // BANNER
 // ============================================================
 
-import 'vide/dist/jquery.vide';
+// import 'vide/dist/jquery.vide';
 
 // ============================================================
 // MOBILE MENU
@@ -147,7 +164,6 @@ if(way4) {
     });
 }
 
-
 // ============================================================
 // READ MORE
 // ============================================================
@@ -164,6 +180,129 @@ $('.article').readmore({
     moreLink: '<a href="#">Read more</a>',
     lessLink: '<a href="#">Close</a>'
 });
+
+// ============================================================
+// SERVICES [ALL CARD ANIMATION]
+// ============================================================
+const srvAnimate1 = document.getElementById('anime1');
+const srvAnimate2 = document.getElementById('anime2');
+const srvAnimate3 = document.getElementById('anime3');
+const srvAnimate4 = document.getElementById('anime4');
+const animateClass1 = ['animate__animated', 'animate__flipInX'];
+const animateClass2 = ['animate__animated', 'animate__flipInX'];
+const animateClass3 = ['animate__animated', 'animate__flipInX'];
+const animateClass4 = ['animate__animated', 'animate__flipInX'];
+
+if(srvAnimate1) {
+    const waypoint1 = new Waypoint({
+        element: srvAnimate1,
+        handler: function(direction) {
+            if(direction === 'up') {
+                srvAnimate1.classList.remove(...animateClass1);
+            } else {
+                srvAnimate1.classList.add(...animateClass1);
+            }
+        },
+        offset: '50%' 
+    });
+}
+
+if(srvAnimate2) {
+    const waypoint2 = new Waypoint({
+        element: srvAnimate2,
+        handler: function(direction) {
+            if(direction === 'up') {
+                srvAnimate2.classList.remove(...animateClass2);
+            } else {
+                srvAnimate2.classList.add(...animateClass2);
+            }
+        },
+        offset: '50%' 
+    });
+}
+
+if(srvAnimate3) {
+    const waypoint3 = new Waypoint({
+        element: srvAnimate3,
+        handler: function(direction) {
+            if(direction === 'up') {
+                srvAnimate3.classList.remove(...animateClass3);
+            } else {
+                srvAnimate3.classList.add(...animateClass3);
+            }
+        },
+        offset: '50%' 
+    });
+}
+
+if(srvAnimate4) {
+    const waypoint4 = new Waypoint({
+        element: srvAnimate4,
+        handler: function(direction) {
+            if(direction === 'up') {
+                srvAnimate4.classList.remove(...animateClass4);
+            } else {
+                srvAnimate4.classList.add(...animateClass4);
+            }
+        },
+        offset: '50%' 
+    });
+}
+
+// ===============================================================================
+// HOME PAGE ALL VARIABLES 
+// ================================================================================
+const abtImage = document.querySelector('.abt--image');
+const atmCards = document.querySelector('.atm-cards');
+
+// ===============================================================================
+// ANIMATION FUNCTIONS 
+// ================================================================================
+
+const animateCSS = (element, animation, prefix = 'animate__') =>
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    const node = document.querySelector(element);
+    node.classList.add(`${prefix}animated`, animationName);
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      node.classList.remove(`${prefix}animated`, animationName);
+      resolve('Animation ended');
+    }
+    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+});
+
+animateCSS('.navbar-logo', 'bounce');
+
+// ABOUT IMAGE
+if(abtImage) {
+    const abtImages = new Waypoint({
+        element: abtImage,
+        handler: function(direction) {
+            if(direction === 'up') {
+                abtImage.classList.remove('animate__animated', 'animate__fadeIn');
+            } else {
+                abtImage.classList.add('animate__animated', 'animate__fadeIn');
+            }
+        },
+        offset: '50%' 
+    });
+}
+
+// SIMPLIFIED BANKING
+if(atmCards) {
+    const atmCard = new Waypoint({
+        element: atmCards,
+        handler: function(direction) {
+            if(direction === 'up') {
+                atmCards.classList.remove('animate__animated', 'animate__fadeInUp');
+            } else {
+                atmCards.classList.add('animate__animated', 'animate__fadeInUp');
+            }
+        },
+        offset: 600
+    });
+}
 
 // ============================================================
 // OTHER CODE

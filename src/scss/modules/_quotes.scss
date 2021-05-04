@@ -6,7 +6,7 @@
     padding: 20px;
     background-color: rgba($color--primary, 0.03); 
     border-radius: $br-radius;
-    border-left: 5px solid $color--seconary;
+    border-left: 5px solid color(primary);
     span {
         display: block;
         font-size: em(18px);
@@ -20,7 +20,7 @@
             bottom: 0;
             right: 30px;
             font-size: em(34px);
-            color: $color--seconary;
+            color: color(primary);
         }
     }       
 }

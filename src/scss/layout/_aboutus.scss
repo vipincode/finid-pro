@@ -26,11 +26,15 @@
                 }
             }
         }
+
+        .text-accent {
+            margin-top: 50px;
+        }
     }
 }
 
 #counter {
-    background: linear-gradient(90deg, $color--primary, $color--seconary);
+    background: $white;
     padding: 100px 0px;
 }
 
@@ -39,13 +43,15 @@
     color: $white;
 
     h1 {
-        font-size: em(28px);
-        font-weight: $font-weight--xs;
+        font-size: em(24px);
+        font-weight: $font-weight--lg;
+        color: $color--seconary;
     }
 
     span {
         font-size: em(24px);
-        font-weight: $font-weight--md;
+        font-weight: $font-weight--lg;
+        color: color(primary);
     }
 }
 

@@ -20,20 +20,20 @@
 .btn {
     &--primary {
         @extend %btn;
-        background: linear-gradient(90deg, $color--primary, $color--seconary);
+        background: $color--seconary;
         border-bottom: 3px solid darken($color--seconary, 20%);
     }
 
     &--secondary {
         @extend %btn;
-        background: $light--black;
-        border-bottom: 3px solid darken($light--black, 20%);
+        background: color(primary);
+        border-bottom: 3px solid color(primary, dark);
     }
 
     &--white {
         @extend %btn;
         background-color: color(primary, x-light);
-        color: $color--primary;
+        color: color(primary, dark);
         border-bottom: 3px solid color(primary, light);
     }
 }
@@ -41,3 +41,4 @@
 .btn + .btn {
     margin-left: 20px;
 }
+

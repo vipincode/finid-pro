@@ -3,7 +3,7 @@
 // =================================================================
 
 .card {
-    border: 1px dashed color(primary, x-light);
+    border: 1px dashed color(primary, light);
     transition: box-shadow $transition ease-in;
     &-picture {
         overflow: hidden;
@@ -22,6 +22,57 @@
         }
     }
 
+    &:hover {
+        box-shadow: 0 0 40px rgba($color--primary, 0.35);
+    }
+}
+
+// =================================================================
+//  BLOG CARDS LAYOUT
+// =================================================================
+
+.bcard {
+    border: 1px dashed color(primary, light);
+    
+    &-picture {
+        overflow: hidden;
+        img {
+            transform-origin: 0 0;
+            transition: transform $transition ease-in;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+    &-heading {
+        display: block;
+        color: $light--black;
+        font-size: em(21px);
+        margin-bottom: em(15px, 21px);
+        font-weight: $font-weight--md;
+        transition: color $transition ease-out;
+        &:hover {
+            color: color(primary);
+        }
+    }
+    &-contnet {
+        padding: 15px;
+        span {
+            display: block;
+            font-size: em(15px);
+            margin-bottom: em(12px, 15px);
+            font-weight: $font-weight--sm;
+            color: $color--seconary;
+        }
+        .btn--blogs {
+            display: inline-block;
+            color: color(primary);
+            font-size: em(17px);
+            margin-top: em(30px, 17px);
+            font-weight: $font-weight--md;
+            padding: 14px 0px;
+        }
+    }
     &:hover {
         box-shadow: 0 0 40px rgba($color--primary, 0.35);
     }

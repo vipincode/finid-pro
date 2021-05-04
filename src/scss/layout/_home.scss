@@ -9,6 +9,9 @@
 
 .service {
     @extend %center;
+    .heading {
+        @extend %bar-center;
+    }
     &-content {
         @extend %top-80;
     }
@@ -16,10 +19,10 @@
         background-color: $white;
         padding: 20px;
         border-radius: $br-radius;
-        border: 1px dashed color(primary, x-light);
+        border: 1px dashed color(primary, light);
         transition: box-shadow $transition ease;
         &:hover {
-            box-shadow: 0 0 30px rgba(color(primary, x-light), 1);
+            box-shadow: 0 0 30px rgba(color(primary, light), 1);
         }
 
         img {
@@ -44,14 +47,16 @@
 .about {
     .heading {
         @extend %center;
+        @extend %bar-center;
     }
 
     &-content {
         @extend %top-50;
         article {
             h2 {
-                font-size: em(24px);
-                font-weight: $font-weight--md;
+                color: color(primary);
+                font-size: em(28px);
+                font-weight: $font-weight--lg;
                 margin-bottom: em(15px, 24px);
             }
 
@@ -90,7 +95,9 @@
             left: 50%;
             bottom: -43px;
             transform: translateX(-50%);
-            width: 60%;
+            width: 75%;
+            max-width: 800px;
+            z-index: 2;
         }
         
         ul {
@@ -108,15 +115,14 @@
                 text-align: center;
                 padding: 20px 10px;
                 a {
-                    color: color(black, x-light);
+                    color: color(primary);
                     display: block;
-                    font-size: em(10px);
-                    text-transform: uppercase;
+                    font-size: em(14px);
                     letter-spacing: $letter-space;
-                    font-weight: $font-weight--lg;
+                    font-weight: $font-weight--sm;
                     transition: color $transition ease-in-out;
                     &:hover {
-                        color: initial;
+                        color: color(primary, dark);
                     }
                 }
             }
@@ -135,7 +141,7 @@
             padding: 50px;
         }
         &__right {
-            background: linear-gradient(-135deg, $color--primary, $color--seconary);
+            background: color(primary);
             position: relative;
             overflow: hidden;
             height: 400px;
@@ -155,17 +161,126 @@
             }
         }
         article {
-            h2 {
-                font-size: em(24px);
-                margin-bottom: em(15px, 24px);
-            }
-    
             p {
                 line-height: em(30px, 16px);
+                @extend %top-50;
             }
 
             .btn {
                 margin-top: 30px;
+            }
+        }
+    }
+}
+
+// ==========================================================================
+//               HOME [LOANS]
+// ==========================================================================
+
+#loan {
+    background-color: color(grey, x-light);
+    padding: 150px 0px 80px;
+    position: relative;
+}
+
+.loan {
+    &-images {
+        @include mq('xl') {
+            position: absolute;
+            right: 0;
+        }
+    }
+    &-content {
+        article:first-child {
+            @extend %top-80;
+            border-left: 4px solid color(primary);
+            padding-left: 25px;
+        }
+
+        article + article {
+            padding: 30px 25px;
+        }
+
+        article {
+            border-left: 4px solid $color--seconary;
+            padding-left: 25px;
+        }
+
+        h3 {
+            font-size: em(21px);
+            font-weight: $font-weight--md;
+            color: color(primary);
+            margin-bottom: em(15px, 21px);
+            position: relative;
+            @include icons($el: 'after', $el-height: 32px, $el-width: 32px) {
+                border-radius: $br-roundy;
+                background-color: color(primary);
+                left: -43px;
+                top: -2px;
+                content: '\f00c';
+                color: $white;
+                text-align: center;
+                font-size: 18px;
+                line-height: 32px;
+            }
+        }
+
+        p {
+            color: color(grey);
+            font-size: em(18px);
+        }
+    }
+}
+
+// ==========================================================================
+//               HOME [APPLY]
+// ==========================================================================
+
+#apply {
+    @include bg-image($bg-position: center, $bg-repeat: no-repeat, $bg-size: cover) {
+        background-color: $color--primary;
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+    }
+    padding: 100px 0px;
+}
+
+.apply {
+
+    &-heading {
+        @extend %bottom-80;
+        .sec-heading {
+            color: $white;
+        }
+    }
+    &-content {
+        .step-card {
+            @include mq('md') {
+                @include flexy($dir: column);
+                min-height: 230px;
+            }
+            background-color: $white;
+            border-radius: $br-radius;
+            padding: 15px;
+
+            h3 {
+                color: $light--black;
+                font-size: em(22px);
+                font-weight: $font-weight--lg;
+                margin-bottom: em(15px, 22px);
+            }
+
+            p {
+                font-size: em(15px);
+                font-weight: $font-weight--md;
+                color: color(primary);
+            }
+
+            .btn {
+                text-transform: initial;
+                margin-top: 50px;
+                margin-top: auto;
+                align-self: flex-start;
             }
         }
     }
@@ -177,7 +292,6 @@
 
 #testimonial {
     background-color: color(grey, x-light);
-    @extend %top-80;
     padding: 100px 0px;
     overflow: hidden;
 }
@@ -194,6 +308,7 @@
     }
     .heading {
         text-align: center;
+        @extend %bar-center;
         p {
             margin-bottom: 30px;
         }
@@ -248,3 +363,22 @@
     }
 }
 
+// ==========================================================================
+//               HOME [LATEST NEWS]
+// ==========================================================================
+
+#news {
+    @extend %top-80;
+    @extend %bottom-80;
+}
+
+.news {
+    &-heading {
+        @extend %bottom-80;
+    }
+
+    &-list {
+        text-align: center;
+        margin: 30px 0px 80px;
+    }
+}

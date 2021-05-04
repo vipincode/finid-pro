@@ -30,6 +30,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.0.0-beta3",
     "counterup2": "^1.0.4",
     "countup.js": "^2.0.7",

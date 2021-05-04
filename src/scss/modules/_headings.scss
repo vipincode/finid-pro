@@ -8,9 +8,11 @@
         width: 60%;
     }
     p {
+        font-size: em(17px);
         font-weight: $font-weight--sm;
-        color: $black;
-        line-height: em(30px, 16px);
+        color: color(grey);
+        line-height: em(35px, 17px);
+        @extend %top-50;
     }
 }
 
@@ -34,46 +36,47 @@
 }
 
 .sm-heading {
-    font-size: em(13px);
+    font-size: em(32px);
     font-weight: $font-weight--lg;
-    line-height: em(30px, 13px);
+    line-height: em(30px, 32px);
     letter-spacing: $letter-space;
-    text-transform: uppercase;
-    color: $color--primary;
+    color: $color--seconary;
 }
 
 .prim-heading {
+    color: $color--seconary;
     font-size: em(32px);
     font-weight: $font-weight--lg;
-    margin-bottom: em(15px, 32px);
-    span {
-        color: $color--seconary;
-    }
-    @include mq('md') {
-        font-size: em(36px);
-        margin-bottom: em(15px, 36px);
+    @include mq('lg') {
+        font-size: em(42px);
+        line-height: em(55px, 42px);
     }
 }
 
 .sec-heading {
-    font-size: em(26px);
-    font-weight: $font-weight--xl;
-    margin-bottom: em(15px, 26px);
-    color: $black;
-    span {
-        color: $color--primary;
+    position: relative;
+    color: color(primary);
+    font-size: em(32px);
+    font-weight: $font-weight--lg;
+    @include p-el($el: 'after', $el-width: 70px, $el-height: 3px) {
+        background-color: $color--seconary;
+        top: 80px;
+        left: 0;
+        @include mq('xs') {
+            top: 91px;
+        }
     }
-    @include mq('md') {
-        font-size: em(28px);
-        margin-bottom: em(15px, 28px);
+    @include mq('lg') {
+        font-size: em(42px);
+        line-height: em(55px, 42px);
     }
 }
 
 .ter-heading {
-    font-size: em(17px);
+    font-size: em(18px);
     font-weight: $font-weight--md;
-    margin-bottom: em(15px, 17px);
-    color: $black;
+    margin-bottom: em(15px, 18px);
+    color: $light--black;
 }
 
 .text-accent {

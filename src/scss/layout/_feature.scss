@@ -10,6 +10,7 @@
 .feature {
     .heading {
         text-align: center;
+        @extend %bar-center;
     }
     &-content {
         margin-top: 80px;
